@@ -1,9 +1,6 @@
 var _ = require('lodash')
 
-
-/*
-simple example
-*/
+// simple example
 var dragon =
 	name =>
 		size =>
@@ -15,9 +12,7 @@ var output = dragon('Karo')('large')('ice')
 console.log(output, '\n')
 
 
-/*
-playing around
-*/
+// playing around
 var dragons = [
 	{ name: 'fluffykins', element: 'lightning' },
 	{ name: 'noomi',      element: 'lightning' },
@@ -25,14 +20,13 @@ var dragons = [
 	{ name: 'doomer',     element: 'timewarp' }
 ]
 
-/* normal version */
+// normal version
 var hasElement = (element, obj) => element === obj.element
 var lightningDragons = dragons.filter(d => hasElement('lightning', d))
 console.log('normal', lightningDragons, '\n')
 
-/* curried */
-var hasElement = 
+// curried
+var hasElement =
 	_.curry((element, obj) => element === obj.element)
 var lightningDragons = dragons.filter(hasElement('lightning'))
 console.log('curried', lightningDragons, '\n')
-

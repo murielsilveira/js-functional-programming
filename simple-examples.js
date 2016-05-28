@@ -5,26 +5,20 @@ var animals = [
 	{name: 'Chica',  species: 'cat', weight: 325},
 ];
 
-/*
-filter
-*/
+// filter
 var isDog = function(animal) {
     return animal.species === 'dog';
 };
 var dogs = animals.filter(isDog);
 console.log('dogs:', dogs);
 
-/*
-map  
-*/
+// map
 var names = animals.map(function(animal) {
     return animal.name;
 });
 console.log('names:', names);
 
-/*
-reduce
-*/
+// reduce
 var totalWeight = animals.reduce(function(sum, animal) {
     return sum + animal.weight;
 }, 0);
