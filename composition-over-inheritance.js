@@ -17,7 +17,7 @@ const driver = (state) => ({
 })
 
 const killer = (state) => ({
-  kill: () => console.log('hihihiih')
+  kill: () => console.log('Silence, I kill you!!')
 })
 
 const murderRobotDog = (name) => {
