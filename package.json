@@ -9,6 +9,7 @@
   "author": "Muriel Silveira",
   "license": "ISC",
   "dependencies": {
+    "co": "^4.6.0",
     "lodash": "^4.13.1",
     "node-fetch": "^1.5.3"
   }
